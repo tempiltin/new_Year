@@ -1,0 +1,52 @@
+@keyframes firework {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.2); opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.new-year-decorations {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.fireworks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.firework-1, .firework-2, .firework-3, .firework-4, .firework-5 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 40px 20px #ffeb3b;
+  animation: firework 2s infinite;
+}
+
+.firework-1 { top: 20%; left: 20%; animation-delay: 0s; }
+.firework-2 { top: 40%; left: 60%; animation-delay: 0.4s; }
+.firework-3 { top: 60%; left: 40%; animation-delay: 0.8s; }
+.firework-4 { top: 30%; left: 80%; animation-delay: 1.2s; }
+.firework-5 { top: 70%; left: 30%; animation-delay: 1.6s; }
+
+.floating-items span {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 3s infinite ease-in-out;
+}
+
+.bell { top: 10%; left: 15%; animation-delay: 0s; }
+.gift { top: 20%; right: 20%; animation-delay: 0.5s; }
+.star { top: 15%; left: 80%; animation-delay: 1s; }
+.tree { top: 25%; right: 15%; animation-delay: 1.5s; }
